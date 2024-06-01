@@ -16,32 +16,45 @@ struct ContentView: View {
     @State private var alertTitle = ""
     @State private var alertMessage = ""
     
+    static var defaultWakeTime : Date{
+        var components = DateComponents()
+        components.hour = 7
+        components.minute = 0
+        return Calendar.current.date(from: components) ?? .now
+    }
     
     var body: some View {
         NavigationStack{
-            VStack{
-                Text("When do you want to wake up?")
-                    .font(.headline)
+            Form{
+                VStack(alignment: .leading){
+                    Text("When do you want to wake up?")
+                        .font(.headline)
+                    
+                    DatePicker("Select the date", selection: $wakeUp, displayedComponents: .hourAndMinute)
+                        .labelsHidden()
+                }
                 
-                DatePicker("Select the date", selection: $wakeUp, displayedComponents: .hourAndMinute)
-                    .labelsHidden()
+                VStack(alignment: .leading){
+                    Text("Enter the desired amount of sleep.")
+                        .font(.headline)
+                    
+                    Stepper("\(sleepAmount.formatted()) hours", value: $sleepAmount, in: 4...12, step: 0.25)
+                }
                 
-                Text("Enter the desired amount of sleep.")
-                    .font(.headline)
-                
-                Stepper("\(sleepAmount.formatted()) hours", value: $sleepAmount, in: 4...12, step: 0.25)
-                
-                Text("Enter the number of cups of coffee you have consumed today.")
-                    .font(.headline)
+                VStack(alignment: .leading){
+                    Text("Enter the number of cups of coffee you have consumed today.")
+                        .font(.headline)
 
+                    
+                    Stepper("\(coffeeAmount == 1 ? "\(coffeeAmount) Cup" : "\(coffeeAmount) Cups" )", value: $coffeeAmount, in: 0...8)
+                }
                 
-                Stepper("\(coffeeAmount == 1 ? "\(coffeeAmount) Cup" : "\(coffeeAmount) Cups" )", value: $coffeeAmount, in: 1...8)
+                
             }
             .navigationTitle("Better Rest")
             .toolbar{
                 Button("Calculate", action: calculateBedTime)
             }
-            .padding()
         }
         .alert(alertTitle, isPresented: $showingAlert){
             Button("OK"){}
