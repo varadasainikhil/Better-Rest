@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		86312AAB2C0AC1FB002C1541 /* SleepCalculator.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 86312AAA2C0AC1FB002C1541 /* SleepCalculator.mlpackage */; };
 		868580F32C08DB5000093BF3 /* Better_RestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868580F22C08DB5000093BF3 /* Better_RestApp.swift */; };
 		868580F52C08DB5000093BF3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868580F42C08DB5000093BF3 /* ContentView.swift */; };
 		868580F72C08DB5200093BF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 868580F62C08DB5200093BF3 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		86312AAA2C0AC1FB002C1541 /* SleepCalculator.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = SleepCalculator.mlpackage; sourceTree = "<group>"; };
 		868580EF2C08DB5000093BF3 /* Better Rest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Better Rest.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		868580F22C08DB5000093BF3 /* Better_RestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Better_RestApp.swift; sourceTree = "<group>"; };
 		868580F42C08DB5000093BF3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 				868580F22C08DB5000093BF3 /* Better_RestApp.swift */,
 				868580F42C08DB5000093BF3 /* ContentView.swift */,
 				868580F62C08DB5200093BF3 /* Assets.xcassets */,
+				86312AAA2C0AC1FB002C1541 /* SleepCalculator.mlpackage */,
 				868580F82C08DB5200093BF3 /* Preview Content */,
 			);
 			path = "Better Rest";
@@ -139,6 +142,7 @@
 			files = (
 				868580F52C08DB5000093BF3 /* ContentView.swift in Sources */,
 				868580F32C08DB5000093BF3 /* Better_RestApp.swift in Sources */,
+				86312AAB2C0AC1FB002C1541 /* SleepCalculator.mlpackage in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
