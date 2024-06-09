@@ -83,7 +83,7 @@ struct ContentView: View {
         }
         catch{
             alertTitle = "Error"
-            alertMessage = "Sorry, there was a problem calculating you bedtime."
+            alertMessage = "Sorry, there was a problem calculating your bedtime."
         }
         showingAlert = true
     }
